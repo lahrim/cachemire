@@ -11,7 +11,7 @@ struct ContentView: View {
       Color.bg.ignoresSafeArea()
 
       VStack(alignment: .trailing){
-        ModalAdd()
+        ModalAddCategory()
           .padding(.bottom)
 
 

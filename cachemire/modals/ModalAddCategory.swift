@@ -1,7 +1,7 @@
 import SwiftUI
 
 
-struct ModalAdd: View {
+struct ModalAddCategory: View {
   var title = "Ajouter une catégorie"
 
   @State private var toggleModal = false
@@ -79,4 +79,4 @@ struct ModalAdd: View {
 }
 
 
-#Preview { ModalAdd() }
+#Preview { ModalAddCategory() }

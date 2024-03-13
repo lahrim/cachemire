@@ -10,26 +10,23 @@ struct Button_2: View {
   
   
   var body: some View {
-    Button(
-      action: {},
-      label: {
-        Text(text)
+    HStack{
+      Text(text)
+        .font(.title2)
+        .foregroundStyle(.black)
+
+      Spacer()
+      
+      Button("", systemImage: reading ? "pause.fill" : "play"){ reading.toggle() }
+        .font(.title2)
+        .foregroundColor(.black)
+      
+      if favori {
+        Button("", systemImage: favoriActive ? "heart.fill" : "heart"){ favoriActive.toggle() }
           .font(.title2)
-          .foregroundStyle(.black)
-        
-        Spacer()
-        
-        Button("", systemImage: reading ? "pause.fill" : "play"){ reading.toggle() }
-          .font(.title2)
-          .foregroundColor(.black)
-        
-        if favori {
-          Button("", systemImage: favoriActive ? "heart.fill" : "heart"){ favoriActive.toggle() }
-            .font(.title2)
-            .foregroundColor(favoriActive ? .red : .black)
-        }
+          .foregroundColor(favoriActive ? .red : .black)
       }
-    )
+    }
     .padding(20)
     .background(.white)
     .clipShape(RoundedRectangle(cornerRadius: 10))

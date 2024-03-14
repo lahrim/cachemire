@@ -10,14 +10,18 @@
 		072401E32B987D8A0030E077 /* cachemireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401E22B987D8A0030E077 /* cachemireApp.swift */; };
 		072401E52B987D8A0030E077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401E42B987D8A0030E077 /* ContentView.swift */; };
 		072401E72B987D8C0030E077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072401E62B987D8C0030E077 /* Assets.xcassets */; };
-		072401EA2B987D8C0030E077 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072401E92B987D8C0030E077 /* Preview Assets.xcassets */; };
-		072401F22B98854D0030E077 /* loadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401F12B98854D0030E077 /* loadingView.swift */; };
+		072401F22B98854D0030E077 /* LoadingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401F12B98854D0030E077 /* LoadingPage.swift */; };
 		0739D7932BA074DA0073D787 /* Dressing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739D7922BA074DA0073D787 /* Dressing.swift */; };
 		0739D7952BA082D70073D787 /* DressingChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739D7942BA082D70073D787 /* DressingChild.swift */; };
 		0769F6AE2B9B6000009DD056 /* Button_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769F6AD2B9B6000009DD056 /* Button_3.swift */; };
+		07C226232BA2028500F8E0B6 /* Assistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C226222BA2028500F8E0B6 /* Assistance.swift */; };
+		07C226252BA2029400F8E0B6 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C226242BA2029400F8E0B6 /* Favorite.swift */; };
+		07C226272BA2029E00F8E0B6 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C226262BA2029E00F8E0B6 /* Suggestion.swift */; };
 		07C6F0042B9F1A5C00B608E0 /* ModalAddCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0032B9F1A5C00B608E0 /* ModalAddCategory.swift */; };
 		07C6F0062B9F20AD00B608E0 /* Button_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0052B9F20AD00B608E0 /* Button_1.swift */; };
 		07C6F0082B9F541400B608E0 /* Button_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0072B9F541400B608E0 /* Button_2.swift */; };
+		07C780952BA33AC4007A6BD8 /* FavoriteChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C780942BA33AC4007A6BD8 /* FavoriteChild.swift */; };
+		07C780972BA385AC007A6BD8 /* SuggestionChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C780962BA385AC007A6BD8 /* SuggestionChild.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,14 +29,18 @@
 		072401E22B987D8A0030E077 /* cachemireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cachemireApp.swift; sourceTree = "<group>"; };
 		072401E42B987D8A0030E077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		072401E62B987D8C0030E077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		072401E92B987D8C0030E077 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		072401F12B98854D0030E077 /* loadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadingView.swift; sourceTree = "<group>"; };
+		072401F12B98854D0030E077 /* LoadingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPage.swift; sourceTree = "<group>"; };
 		0739D7922BA074DA0073D787 /* Dressing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dressing.swift; sourceTree = "<group>"; };
 		0739D7942BA082D70073D787 /* DressingChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressingChild.swift; sourceTree = "<group>"; };
 		0769F6AD2B9B6000009DD056 /* Button_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_3.swift; sourceTree = "<group>"; };
+		07C226222BA2028500F8E0B6 /* Assistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistance.swift; sourceTree = "<group>"; };
+		07C226242BA2029400F8E0B6 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		07C226262BA2029E00F8E0B6 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		07C6F0032B9F1A5C00B608E0 /* ModalAddCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddCategory.swift; sourceTree = "<group>"; };
 		07C6F0052B9F20AD00B608E0 /* Button_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_1.swift; sourceTree = "<group>"; };
 		07C6F0072B9F541400B608E0 /* Button_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_2.swift; sourceTree = "<group>"; };
+		07C780942BA33AC4007A6BD8 /* FavoriteChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteChild.swift; sourceTree = "<group>"; };
+		07C780962BA385AC007A6BD8 /* SuggestionChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionChild.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +77,8 @@
 				077692B12BA1942D00A36F81 /* modals */,
 				07C7C2B72B9A199B008B27E2 /* components */,
 				07C7C2B92B9A1CD6008B27E2 /* pages */,
-				072401E82B987D8C0030E077 /* Preview Content */,
 			);
 			path = cachemire;
-			sourceTree = "<group>";
-		};
-		072401E82B987D8C0030E077 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				072401E92B987D8C0030E077 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		0739D7912BA074670073D787 /* dressing */ = {
@@ -99,6 +98,32 @@
 			path = modals;
 			sourceTree = "<group>";
 		};
+		07C2261F2BA1E06500F8E0B6 /* suggestion */ = {
+			isa = PBXGroup;
+			children = (
+				07C226262BA2029E00F8E0B6 /* Suggestion.swift */,
+				07C780962BA385AC007A6BD8 /* SuggestionChild.swift */,
+			);
+			path = suggestion;
+			sourceTree = "<group>";
+		};
+		07C226202BA1E08E00F8E0B6 /* favorite */ = {
+			isa = PBXGroup;
+			children = (
+				07C226242BA2029400F8E0B6 /* Favorite.swift */,
+				07C780942BA33AC4007A6BD8 /* FavoriteChild.swift */,
+			);
+			path = favorite;
+			sourceTree = "<group>";
+		};
+		07C226212BA1E0A300F8E0B6 /* assistance */ = {
+			isa = PBXGroup;
+			children = (
+				07C226222BA2028500F8E0B6 /* Assistance.swift */,
+			);
+			path = assistance;
+			sourceTree = "<group>";
+		};
 		07C7C2B72B9A199B008B27E2 /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,10 +137,13 @@
 		07C7C2B92B9A1CD6008B27E2 /* pages */ = {
 			isa = PBXGroup;
 			children = (
-				0739D7912BA074670073D787 /* dressing */,
 				072401E22B987D8A0030E077 /* cachemireApp.swift */,
 				072401E42B987D8A0030E077 /* ContentView.swift */,
-				072401F12B98854D0030E077 /* loadingView.swift */,
+				072401F12B98854D0030E077 /* LoadingPage.swift */,
+				07C226212BA1E0A300F8E0B6 /* assistance */,
+				0739D7912BA074670073D787 /* dressing */,
+				07C226202BA1E08E00F8E0B6 /* favorite */,
+				07C2261F2BA1E06500F8E0B6 /* suggestion */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -179,7 +207,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072401EA2B987D8C0030E077 /* Preview Assets.xcassets in Resources */,
 				072401E72B987D8C0030E077 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,14 +219,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0739D7932BA074DA0073D787 /* Dressing.swift in Sources */,
-				072401F22B98854D0030E077 /* loadingView.swift in Sources */,
+				072401F22B98854D0030E077 /* LoadingPage.swift in Sources */,
+				07C780952BA33AC4007A6BD8 /* FavoriteChild.swift in Sources */,
 				072401E52B987D8A0030E077 /* ContentView.swift in Sources */,
+				07C226252BA2029400F8E0B6 /* Favorite.swift in Sources */,
 				0739D7952BA082D70073D787 /* DressingChild.swift in Sources */,
 				07C6F0082B9F541400B608E0 /* Button_2.swift in Sources */,
 				0769F6AE2B9B6000009DD056 /* Button_3.swift in Sources */,
 				07C6F0062B9F20AD00B608E0 /* Button_1.swift in Sources */,
+				07C226232BA2028500F8E0B6 /* Assistance.swift in Sources */,
+				07C780972BA385AC007A6BD8 /* SuggestionChild.swift in Sources */,
 				072401E32B987D8A0030E077 /* cachemireApp.swift in Sources */,
 				07C6F0042B9F1A5C00B608E0 /* ModalAddCategory.swift in Sources */,
+				07C226272BA2029E00F8E0B6 /* Suggestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

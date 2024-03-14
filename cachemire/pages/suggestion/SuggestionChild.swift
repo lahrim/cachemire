@@ -1,7 +1,7 @@
 import SwiftUI
 
 
-struct DressingChild: View {
+struct SuggestionChild: View {
   var vetementName = ""
   
   struct Array: Identifiable {
@@ -11,16 +11,14 @@ struct DressingChild: View {
   }
   
   let arrayList: [Array] = [
-    Array(name: "blanc"),
-    Array(name: "bleu", song: "song_02"),
-    Array(name: "rouge"),
-    Array(name: "jaune"),
-    Array(name: "noir")
+    Array(name: "T-shirt blanc"),
+    Array(name: "Pantalon bleu", song: "song_02"),
+    Array(name: "Pull rouge")
   ]
   
-//  @Binding var Nom: String
-
-
+  //  @Binding var Nom: String
+  
+  
   var body: some View {
     ZStack{
       Color.bg.ignoresSafeArea(edges: .top)
@@ -33,7 +31,7 @@ struct DressingChild: View {
             
             ScrollView{
               ForEach(arrayList) { i in
-                Button_2(text: vetementName + " " + i.name, favori: true)
+                Button_2(text: i.name)
               }
             } // ScrollView
             
@@ -49,4 +47,4 @@ struct DressingChild: View {
 }
 
 
-#Preview { DressingChild() }
+#Preview { SuggestionChild() }

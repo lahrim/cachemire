@@ -1,14 +1,14 @@
 import SwiftUI
 
 
-struct Dressing: View {
-  @State private var arrayList = ["T-shirts", "Pulls", "Jupes", "Pantalons"]
-
-
+struct Favorite: View {
+  @State private var arrayList = ["Anniversaires", "Lundi", "Soirée cinéma"]
+  
+  
   var body: some View {
     NavigationStack{
       ZStack{
-        Color.bg.ignoresSafeArea(.all)
+        Color.bg.ignoresSafeArea(edges: .top)
         
         ScrollView{
           VStack{
@@ -21,8 +21,10 @@ struct Dressing: View {
             } // VStack
             .padding(.vertical)
             
+            
+            
             ForEach(arrayList, id: \.self) { name in
-              NavigationLink(destination: DressingChild(vetementName: name)) {
+              NavigationLink(destination: FavoriteChild(vetementName: name)) {
                 Text(name.description)
                   .font(.title2)
                   .foregroundStyle(.black)
@@ -41,10 +43,10 @@ struct Dressing: View {
           .padding()
         } // ScrollView
       } // ZStack
-      .navigationTitle("Dressing")
+      .navigationTitle("Favoris")
     } // NavigationView
   }
 }
 
 
-#Preview { Dressing() }
+#Preview { Favorite() }

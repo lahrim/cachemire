@@ -3,13 +3,21 @@ import SwiftUI
 
 struct Button_3: View {
   var annuler = false
+  var titleTextField = ""
+  
   @Binding var toggleModal: Bool
+  @Binding var bindingTitleTextField: [String]
 
 
   var body: some View {
     Button (
       action: {
-        if annuler { toggleModal = false }
+        if !annuler && (titleTextField.count > 0) {
+          bindingTitleTextField.append(titleTextField)
+          toggleModal = false
+        } else if annuler {
+          toggleModal = false
+        }
       },
       label: {
         Text(annuler ? "Annuler" : "Valider")
@@ -27,4 +35,4 @@ struct Button_3: View {
 }
 
 
-#Preview { Button_3(toggleModal: .constant(false)) }
+#Preview { Button_3(toggleModal: .constant(Bool()), bindingTitleTextField: .constant([String]())) }

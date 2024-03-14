@@ -1,26 +1,27 @@
 import SwiftUI
 
 
-struct Dressing: View {
-  @State private var arrayList = ["T-shirts", "Pulls", "Jupes", "Pantalons"]
-
-
+struct category: View {
+  @State private var arrayList = ["Anniversaires", "Lundi", "Soirée cinéma"]
+  
+  
   var body: some View {
     NavigationStack{
       ZStack{
-        Color.bg.ignoresSafeArea(.all)
+        Color.bg.ignoresSafeArea(edges: .top)
         
-        ScrollView{
+        VStack{
           VStack{
-            VStack{
-              HStack{
-                Spacer()
-                
-                ModalAddCategory(bindingTitleTextField: $arrayList)
-              } // HStack
-            } // VStack
-            .padding(.vertical)
-            
+            HStack{
+              Spacer()
+              
+              ModalAddCategory(bindingTitleTextField: $arrayList)
+            } // HStack
+          } // VStack
+          .padding(.vertical)
+          
+          
+          ScrollView{
             ForEach(arrayList, id: \.self) { name in
               NavigationLink(destination: DressingChild(vetementName: name)) {
                 Text(name.description)
@@ -37,14 +38,14 @@ struct Dressing: View {
               .background(.white)
               .clipShape(RoundedRectangle(cornerRadius: 10))
             } // ForEach
-          } // VStack
-          .padding()
-        } // ScrollView
+          } // ScrollView
+        } // VStack
+        .padding(.horizontal)
       } // ZStack
-      .navigationTitle("Dressing")
+      .navigationTitle("Favoris")
     } // NavigationView
   }
 }
 
 
-#Preview { Dressing() }
+#Preview { category() }

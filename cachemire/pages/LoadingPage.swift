@@ -1,7 +1,7 @@
 import SwiftUI
 
 
-struct LoadingView: View {
+struct LoadingPage: View {
   @State private var isVisible = false
   
   
@@ -17,7 +17,7 @@ struct LoadingView: View {
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.default)
     .onAppear {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
         withAnimation(.easeInOut(duration: 1.5)) {
           isVisible = true
         } // withAnimation
@@ -27,4 +27,4 @@ struct LoadingView: View {
 }
 
 
-#Preview { LoadingView() }
+#Preview { LoadingPage() }

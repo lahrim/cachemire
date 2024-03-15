@@ -45,12 +45,14 @@ struct ModalAddCategory: View {
             VStack(alignment: .leading){
               Text("Titre")
                 .bold()
+                .accessibilityLabel("Titre")
               
               TextField("Titre", text: $titleTextField)
                 .padding(20)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.bottom, 25)
+                .accessibilityLabel("Titre")
               
               Button_3(titleTextField: titleTextField, toggleModal: $toggleModal, bindingTitleTextField: $bindingTitleTextField)
               
@@ -62,6 +64,7 @@ struct ModalAddCategory: View {
             .padding()
         } // ZStack
       } // Modal - sheet
+      .accessibilityLabel(title)
   }
 }
 

@@ -28,7 +28,7 @@ struct Assistance: View {
             VStack(alignment: .trailing){
               ScrollView{
                 ForEach(arrayList) { i in
-                  Button_2(text: i.name)
+//                  Button_2(text: i.name, useSong: $)
                 }
               } // ScrollView
 
@@ -39,6 +39,7 @@ struct Assistance: View {
         } // ScrollView
       } // ZStack
       .navigationTitle("Assistance")
+      .accessibilityLabel("Assistance")
     } // NavigationStack
   }
 }

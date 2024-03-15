@@ -28,6 +28,7 @@ struct Favorite: View {
                 Text(name.description)
                   .font(.title2)
                   .foregroundStyle(.black)
+                  .accessibilityLabel(name.description)
                 
                 Spacer()
                 
@@ -44,6 +45,7 @@ struct Favorite: View {
         } // ScrollView
       } // ZStack
       .navigationTitle("Favoris")
+      .accessibilityLabel("Favoris")
     } // NavigationView
   }
 }

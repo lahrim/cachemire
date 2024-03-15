@@ -8,7 +8,7 @@ struct Dressing: View {
   var body: some View {
     NavigationStack{
       ZStack{
-        Color.bg.ignoresSafeArea(.all)
+        Color.bg.ignoresSafeArea()
         
         ScrollView{
           VStack{
@@ -26,6 +26,7 @@ struct Dressing: View {
                 Text(name.description)
                   .font(.title2)
                   .foregroundStyle(.black)
+                  .accessibilityLabel(name.description)
                 
                 Spacer()
                 
@@ -42,6 +43,7 @@ struct Dressing: View {
         } // ScrollView
       } // ZStack
       .navigationTitle("Dressing")
+      .accessibilityLabel("Dressing")
     } // NavigationView
   }
 }

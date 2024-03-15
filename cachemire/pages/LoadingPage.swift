@@ -13,6 +13,7 @@ struct LoadingPage: View {
         .bold()
         .opacity(isVisible ? 1 : 0)
         .offset(y: isVisible ? 0 : -30)
+        .accessibilityLabel("cachemire")
     } // VStack
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.default)

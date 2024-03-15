@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070407712BA465D600661D30 /* song_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 070407702BA465D600661D30 /* song_03.mp3 */; };
+		070407732BA465DB00661D30 /* song_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 070407722BA465DB00661D30 /* song_01.mp3 */; };
 		072401E32B987D8A0030E077 /* cachemireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401E22B987D8A0030E077 /* cachemireApp.swift */; };
 		072401E52B987D8A0030E077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401E42B987D8A0030E077 /* ContentView.swift */; };
 		072401E72B987D8C0030E077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072401E62B987D8C0030E077 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070407702BA465D600661D30 /* song_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song_03.mp3; path = ../../../../Downloads/song_03.mp3; sourceTree = "<group>"; };
+		070407722BA465DB00661D30 /* song_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song_01.mp3; path = ../../../../Downloads/song_01.mp3; sourceTree = "<group>"; };
 		072401DF2B987D8A0030E077 /* cachemire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cachemire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		072401E22B987D8A0030E077 /* cachemireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cachemireApp.swift; sourceTree = "<group>"; };
 		072401E42B987D8A0030E077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				072401E62B987D8C0030E077 /* Assets.xcassets */,
+				070407722BA465DB00661D30 /* song_01.mp3 */,
+				070407702BA465D600661D30 /* song_03.mp3 */,
 				077692B12BA1942D00A36F81 /* modals */,
 				07C7C2B72B9A199B008B27E2 /* components */,
 				07C7C2B92B9A1CD6008B27E2 /* pages */,
@@ -207,6 +213,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070407712BA465D600661D30 /* song_03.mp3 in Resources */,
+				070407732BA465DB00661D30 /* song_01.mp3 in Resources */,
 				072401E72B987D8C0030E077 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,18 +7,19 @@ struct DressingChild: View {
   struct Array: Identifiable {
     var id = UUID()
     var name: String
-    var song: String = "song_01"
+    var songName: String = "song_01"
+    var useSong: Bool = false
   }
   
-  let arrayList: [Array] = [
+  @State var arrayList: [Array] = [
     Array(name: "blanc"),
-    Array(name: "bleu", song: "song_02"),
+    Array(name: "bleu", songName: "song_03"),
     Array(name: "rouge"),
     Array(name: "jaune"),
-    Array(name: "noir")
+    Array(name: "noir", songName: "song_02")
   ]
   
-//  @Binding var Nom: String
+  @State private var lhm: Bool = false
 
 
   var body: some View {
@@ -33,7 +34,7 @@ struct DressingChild: View {
             
             ScrollView{
               ForEach(arrayList) { i in
-                Button_2(text: vetementName + " " + i.name, favori: true)
+                Button_2(text: vetementName + " " + i.name, favori: true, songName: i.songName, activeSong: $lhm )
               }
             } // ScrollView
             
@@ -45,6 +46,9 @@ struct DressingChild: View {
     } // ZStack
     .navigationTitle(vetementName)
     .navigationBarTitleDisplayMode(.inline)
+    .accessibilityLabel(vetementName)
+    
+    
   }
 }
 

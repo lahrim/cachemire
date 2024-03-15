@@ -2,39 +2,42 @@ import SwiftUI
 import AVFoundation
 
 
-extension AVPlayer {
-  static let sharedDingPlayer: AVPlayer = {
-    var nameSong = "song_01"
-    var format = "mp3"
-    
-    guard let url = Bundle.main.url(forResource: nameSong, withExtension: format) else { fatalError("Failed to find sound file.") }
-
-    return AVPlayer(url: url)
-  }()
-}
-
-
 struct Button_2: View {
   var text = "Mon titre"
   var favori = false
+  var songName = ""
+  var useSong = false
   
-  @State private var isPlaying = false
-  @State private var favoriActive = false
+  @Binding var activeSong: Bool
+  
   @State var audioPlayer:AVAudioPlayer?
+  @State private var isPlay = false
+  @State private var favoriActive = false
   
-  func togglePlaying() {
-//    AVPlayer.sharedDingPlayer.play()
-//    audioPlayer?.play()
-    if let player = audioPlayer {
+  
+  func playSound(song: String, format: String = "mp3") {
+    let url = Bundle.main.url(forResource: song, withExtension: format)!
+
+    do {
+      audioPlayer = try AVAudioPlayer(contentsOf: url)
+      guard let player = audioPlayer else { return }
+      
+      player.prepareToPlay()
       player.play()
       
-      if isPlaying {
-        player.pause()
-      }
+      isPlay =  true
+      activeSong = true
+    } catch let error as NSError {
+      print(error.description)
+    }
+  }
+  
+  func stopSound() {
+    if let player = audioPlayer, player.isPlaying {
+      player.stop()
       
-      // todo - savoir changer tout les icones en play quand l'ont enclanche un autre son
-      
-      isPlaying.toggle()
+      isPlay = false
+      activeSong = false
     }
   }
   
@@ -44,14 +47,14 @@ struct Button_2: View {
       Text(text)
         .font(.title2)
         .foregroundStyle(.black)
+        .accessibilityLabel(text)
       
       Spacer()
       
-      Button("", systemImage: isPlaying ? "pause.fill" : "play") {
-        togglePlaying()
-//        AVPlayer(url: "song_1")
-//        audioPlayer?.play()
+      Button("", systemImage: isPlay ? "pause.fill" : "play") {
+        isPlay ? stopSound() : playSound(song: songName)
       }
+      .padding(.leading, 10)
         .font(.title2)
         .foregroundColor(.black)
       
@@ -59,6 +62,7 @@ struct Button_2: View {
         Button("", systemImage: favoriActive ? "heart.fill" : "heart"){ favoriActive.toggle() }
           .font(.title2)
           .foregroundColor(favoriActive ? .red : .black)
+          .accessibilityLabel(favoriActive ? "" : "Ajouter aux favoris")
       }
     }
     .padding(20)
@@ -68,4 +72,6 @@ struct Button_2: View {
 }
 
 
-#Preview { Button_2() }
+#Preview { 
+  Button_2(activeSong: .constant(Bool()))
+}

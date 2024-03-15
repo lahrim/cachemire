@@ -31,7 +31,7 @@ struct FavoriteChild: View {
             
             ScrollView{
               ForEach(arrayList) { i in
-                Button_2(text: i.name)
+//                Button_2(text: i.name)
               }
             } // ScrollView
             
@@ -43,6 +43,7 @@ struct FavoriteChild: View {
     } // ZStack
     .navigationTitle(vetementName)
     .navigationBarTitleDisplayMode(.inline)
+    .accessibilityLabel(vetementName)
   }
 }
 

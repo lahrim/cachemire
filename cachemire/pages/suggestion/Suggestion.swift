@@ -5,17 +5,19 @@ struct Suggestion: View {
   struct Array: Identifiable {
     var id = UUID()
     var name: String
-    @State public var active: Bool = false
+    var active: Bool = false
   }
   
-  var arrayList: [Array] = [
+  @State private var arrayList: [Array] = [
     Array(name: "Pas de préférence"),
     Array(name: "Couleur bleu"),
     Array(name: "Couleur rouge"),
     Array(name: "Couleur jaune"),
     Array(name: "Couleur noir")
   ]
-
+  
+  // todo - trouver le bon type
+  @State private var reponse = ""
   
   var body: some View {
     NavigationStack{
@@ -28,19 +30,22 @@ struct Suggestion: View {
               HStack {
                 Button(w.name, systemImage: w.active ? "smallcircle.filled.circle" : "circle") {
                   let idActive = w.id
-                  
+
                   for i in arrayList.indices {
                     arrayList[i].active = (arrayList[i].id == idActive)
                   }
                 }
                 .foregroundColor(.black)
+                .accessibilityLabel(w.name)
               } // HStack
             } // ForEach
           } // Section
+          .accessibilityLabel("Mes préférences")
         } // List
         .scrollContentBackground(.hidden)
       } // ZStack
       .navigationTitle("Suggestion")
+      .accessibilityLabel("Suggestion")
     } // NavigationStack
   }
 }

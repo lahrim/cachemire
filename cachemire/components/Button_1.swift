@@ -13,6 +13,7 @@ struct Button_1: View {
         Text(text)
           .font(.title2)
           .foregroundStyle(.black)
+          .accessibilityLabel(text)
 
         Spacer()
 

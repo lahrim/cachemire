@@ -4,7 +4,7 @@ import SwiftUI
 struct Dressing: View {
   var modalAddFavorite = false
     
-  @State private var arrayList = ["T-shirts", "Pulls", "Jupes", "Pantalons"]
+  @State private var arrayList = ["T-shirts", "Pulls", "Jupes", "Pantalons", "Chaussures", "Shorts"]
   @State private var searchText: String = ""
   
   var filtered: [String] {

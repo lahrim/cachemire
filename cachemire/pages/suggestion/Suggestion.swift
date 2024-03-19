@@ -4,10 +4,10 @@ import SwiftUI
 struct Suggestion: View {
   @State private var arrayList: [ArrayStruct] = [
     ArrayStruct(name: "Pas de préférence"),
-    ArrayStruct(name: "Couleur bleu"),
-    ArrayStruct(name: "Couleur rouge"),
-    ArrayStruct(name: "Couleur jaune"),
-    ArrayStruct(name: "Couleur noir")
+    ArrayStruct(name: "Tenue pour le sport"),
+    ArrayStruct(name: "Tenue pour le travail"),
+    ArrayStruct(name: "Tenue pour un date"),
+    ArrayStruct(name: "Tenue pour un concert")
   ]
   
   @State private var reponse = ""

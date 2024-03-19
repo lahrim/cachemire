@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-  @State private var isLoading = false // pour avoir le loading - mettre en true
+  @State private var isLoading = true // pour avoir le loading - mettre en true
   @State private var isOpacity = false
     
   

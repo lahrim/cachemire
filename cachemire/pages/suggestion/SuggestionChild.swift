@@ -10,23 +10,28 @@ struct SuggestionChild: View {
       ArrayStruct(name: "Pantalon bleu", songName: "song_02"),
       ArrayStruct(name: "Pull rouge")
     ]),
-    ArrayStructGroup(name: "Couleur bleu", group: [
-      ArrayStruct(name: "T-shirt bleu"),
+    ArrayStructGroup(name: "Tenue pour le sport", group: [
+      ArrayStruct(name: "T-shirt fluo"),
+      ArrayStruct(name: "Joggin noir", songName: "song_02"),
+      ArrayStruct(name: "Chaussure running"),
+      ArrayStruct(name: "Veste coupe vent")
+    ]),
+    ArrayStructGroup(name: "Tenue pour le travail", group: [
+      ArrayStruct(name: "T-shirt blanc"),
+      ArrayStruct(name: "Chemise bleu"),
+      ArrayStruct(name: "Blazer beige"),
       ArrayStruct(name: "Jean", songName: "song_02")
     ]),
-    ArrayStructGroup(name: "Couleur rouge", group: [
-      ArrayStruct(name: "T-shirt blanc"),
-      ArrayStruct(name: "Pantalon noir", songName: "song_02"),
-      ArrayStruct(name: "Pull rouge")
+    ArrayStructGroup(name: "Tenue pour un date", group: [
+      ArrayStruct(name: "Robe court rouge"),
+      ArrayStruct(name: "Talon"),
+      ArrayStruct(name: "Veste en jean")
     ]),
-    ArrayStructGroup(name: "Couleur jaune", group: [
-      ArrayStruct(name: "T-shirt jaune"),
-      ArrayStruct(name: "Jean", songName: "song_02"),
-    ]),
-    ArrayStructGroup(name: "Couleur noir", group: [
-      ArrayStruct(name: "T-shirt noir"),
-      ArrayStruct(name: "Pantalon noir", songName: "song_02"),
-      ArrayStruct(name: "Pull noir")
+    ArrayStructGroup(name: "Tenue pour un concert", group: [
+      ArrayStruct(name: "Jean wide leg"),
+      ArrayStruct(name: "Croc top"),
+      ArrayStruct(name: "Veste en cuir argenté"),
+      ArrayStruct(name: "Basquette")
     ])
   ]
 

@@ -4,20 +4,24 @@ import SwiftUI
 struct FavoriteChild: View {
   var vetementName = ""
   
-  struct Array: Identifiable {
-    var id = UUID()
-    var name: String
-    var song: String = "song_01"
-  }
+  @State private var arrayListColor = [""]
   
-  let arrayList: [Array] = [
-    Array(name: "T-shirt blanc"),
-    Array(name: "Pantalon bleu", song: "song_02"),
-    Array(name: "Pull rouge")
+  let arrayList: [ArrayStruct] = [
+    ArrayStruct(name: "T-shirt blanc"),
+    ArrayStruct(name: "Pantalon bleu", songName: "song_02"),
+    ArrayStruct(name: "Pull rouge")
   ]
   
-  //  @Binding var Nom: String
+  @State private var searchText: String = ""
   
+  var filtered: [ArrayStruct] {
+    if searchText.isEmpty {
+      return arrayList
+    } else {
+      return arrayList.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+    }
+  }
+
   
   var body: some View {
     ZStack{
@@ -26,12 +30,12 @@ struct FavoriteChild: View {
       ScrollView{
         VStack(alignment: .leading){
           VStack(alignment: .trailing){
-            // ModalAddCategory(title: "Ajouter un vêtement", bindingTitleTextField: $arrayList)
-            // .padding(.bottom)
+             ModalAddFavorite()
+             .padding(.bottom)
             
             ScrollView{
-              ForEach(arrayList) { i in
-//                Button_2(text: i.name)
+              ForEach(filtered) { i in
+                Button_player(text: i.name)
               }
             } // ScrollView
             
@@ -44,8 +48,6 @@ struct FavoriteChild: View {
     .navigationTitle(vetementName)
     .navigationBarTitleDisplayMode(.inline)
     .accessibilityLabel(vetementName)
+    .searchable(text: $searchText)
   }
 }
-
-
-#Preview { FavoriteChild() }

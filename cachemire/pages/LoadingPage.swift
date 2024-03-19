@@ -26,6 +26,3 @@ struct LoadingPage: View {
     } // onAppear
   }
 }
-
-
-#Preview { LoadingPage() }

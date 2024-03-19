@@ -3,40 +3,47 @@ import SwiftUI
 
 struct DressingChild: View {
   var vetementName = ""
+  var modalAddFavorite = false
   
-  struct Array: Identifiable {
-    var id = UUID()
-    var name: String
-    var songName: String = "song_01"
-    var useSong: Bool = false
-  }
+  @State private var arrayListColor = [""]
+  @State private var searchText: String = ""
   
-  @State var arrayList: [Array] = [
-    Array(name: "blanc"),
-    Array(name: "bleu", songName: "song_03"),
-    Array(name: "rouge"),
-    Array(name: "jaune"),
-    Array(name: "noir", songName: "song_02")
+  @State var arrayList: [ArrayStruct] = [
+    ArrayStruct(name: "blanc"),
+    ArrayStruct(name: "bleu", songName: "song_03"),
+    ArrayStruct(name: "rouge"),
+    ArrayStruct(name: "jaune"),
+    ArrayStruct(name: "noir", songName: "song_02")
   ]
   
-  @State private var lhm: Bool = false
-
-
+  var filtered: [ArrayStruct] {
+    if searchText.isEmpty {
+      return arrayList
+    } else {
+      return arrayList.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+    }
+  }
+  
+  
   var body: some View {
     ZStack{
-      Color.bg.ignoresSafeArea(edges: .top)
+      if modalAddFavorite {
+        Color.modal.ignoresSafeArea()
+      } else {
+        Color.bg.ignoresSafeArea(edges: .top)
+      }
       
       ScrollView{
         VStack(alignment: .leading){
           VStack(alignment: .trailing){
-            // ModalAddCategory(title: "Ajouter un vêtement", bindingTitleTextField: $arrayList)
-            // .padding(.bottom)
+            if !modalAddFavorite {
+              ModalAddVetement(bindingTitleTextField: $arrayListColor)
+                .padding(.bottom)
+            }
             
-            ScrollView{
-              ForEach(arrayList) { i in
-                Button_2(text: vetementName + " " + i.name, favori: true, songName: i.songName, activeSong: $lhm )
-              }
-            } // ScrollView
+            ForEach(filtered) { i in
+              Button_player(text: vetementName + " " + i.name, favori: true, songName: i.songName)
+            }
             
             Spacer()
           } // VStack
@@ -47,10 +54,13 @@ struct DressingChild: View {
     .navigationTitle(vetementName)
     .navigationBarTitleDisplayMode(.inline)
     .accessibilityLabel(vetementName)
-    
-    
+    .searchable(text: $searchText)
+    .onChange(of: arrayListColor) { _ in
+      let validEntries = arrayListColor.filter { !$0.isEmpty }
+
+      for entry in validEntries {
+        arrayList.append(ArrayStruct(name: entry))
+      }
+    }
   }
 }
-
-
-#Preview { DressingChild() }

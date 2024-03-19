@@ -1,7 +1,7 @@
 import SwiftUI
 
 
-struct Button_1: View {
+struct Button_1000: View {
   var text = "Mon titre"
 
 
@@ -29,4 +29,4 @@ struct Button_1: View {
 }
 
 
-#Preview { Button_1() }
+#Preview { Button_1000() }

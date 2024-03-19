@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070407712BA465D600661D30 /* song_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 070407702BA465D600661D30 /* song_03.mp3 */; };
-		070407732BA465DB00661D30 /* song_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 070407722BA465DB00661D30 /* song_01.mp3 */; };
+		0700DFA52BA8598C008BE252 /* ModalAddVetement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700DFA42BA8598C008BE252 /* ModalAddVetement.swift */; };
+		0700DFA72BA89588008BE252 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700DFA62BA89588008BE252 /* Struct.swift */; };
+		0700DFA92BA8994B008BE252 /* ModalAddTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700DFA82BA8994B008BE252 /* ModalAddTitle.swift */; };
 		072401E32B987D8A0030E077 /* cachemireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401E22B987D8A0030E077 /* cachemireApp.swift */; };
 		072401E52B987D8A0030E077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401E42B987D8A0030E077 /* ContentView.swift */; };
 		072401E72B987D8C0030E077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072401E62B987D8C0030E077 /* Assets.xcassets */; };
 		072401F22B98854D0030E077 /* LoadingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072401F12B98854D0030E077 /* LoadingPage.swift */; };
 		0739D7932BA074DA0073D787 /* Dressing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739D7922BA074DA0073D787 /* Dressing.swift */; };
 		0739D7952BA082D70073D787 /* DressingChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739D7942BA082D70073D787 /* DressingChild.swift */; };
-		0769F6AE2B9B6000009DD056 /* Button_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769F6AD2B9B6000009DD056 /* Button_3.swift */; };
+		0769F6AE2B9B6000009DD056 /* Button_action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769F6AD2B9B6000009DD056 /* Button_action.swift */; };
+		076E21032BA99FCF0031D5A3 /* ModalAddFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E21022BA99FCF0031D5A3 /* ModalAddFavorite.swift */; };
 		07C226232BA2028500F8E0B6 /* Assistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C226222BA2028500F8E0B6 /* Assistance.swift */; };
 		07C226252BA2029400F8E0B6 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C226242BA2029400F8E0B6 /* Favorite.swift */; };
 		07C226272BA2029E00F8E0B6 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C226262BA2029E00F8E0B6 /* Suggestion.swift */; };
 		07C6F0042B9F1A5C00B608E0 /* ModalAddCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0032B9F1A5C00B608E0 /* ModalAddCategory.swift */; };
-		07C6F0062B9F20AD00B608E0 /* Button_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0052B9F20AD00B608E0 /* Button_1.swift */; };
-		07C6F0082B9F541400B608E0 /* Button_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0072B9F541400B608E0 /* Button_2.swift */; };
+		07C6F0082B9F541400B608E0 /* Button_player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6F0072B9F541400B608E0 /* Button_player.swift */; };
 		07C780952BA33AC4007A6BD8 /* FavoriteChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C780942BA33AC4007A6BD8 /* FavoriteChild.swift */; };
 		07C780972BA385AC007A6BD8 /* SuggestionChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C780962BA385AC007A6BD8 /* SuggestionChild.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		070407702BA465D600661D30 /* song_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song_03.mp3; path = ../../../../Downloads/song_03.mp3; sourceTree = "<group>"; };
-		070407722BA465DB00661D30 /* song_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song_01.mp3; path = ../../../../Downloads/song_01.mp3; sourceTree = "<group>"; };
+		0700DFA42BA8598C008BE252 /* ModalAddVetement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddVetement.swift; sourceTree = "<group>"; };
+		0700DFA62BA89588008BE252 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		0700DFA82BA8994B008BE252 /* ModalAddTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddTitle.swift; sourceTree = "<group>"; };
 		072401DF2B987D8A0030E077 /* cachemire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cachemire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		072401E22B987D8A0030E077 /* cachemireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cachemireApp.swift; sourceTree = "<group>"; };
 		072401E42B987D8A0030E077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,13 +38,13 @@
 		072401F12B98854D0030E077 /* LoadingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPage.swift; sourceTree = "<group>"; };
 		0739D7922BA074DA0073D787 /* Dressing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dressing.swift; sourceTree = "<group>"; };
 		0739D7942BA082D70073D787 /* DressingChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressingChild.swift; sourceTree = "<group>"; };
-		0769F6AD2B9B6000009DD056 /* Button_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_3.swift; sourceTree = "<group>"; };
+		0769F6AD2B9B6000009DD056 /* Button_action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_action.swift; sourceTree = "<group>"; };
+		076E21022BA99FCF0031D5A3 /* ModalAddFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddFavorite.swift; sourceTree = "<group>"; };
 		07C226222BA2028500F8E0B6 /* Assistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistance.swift; sourceTree = "<group>"; };
 		07C226242BA2029400F8E0B6 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		07C226262BA2029E00F8E0B6 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		07C6F0032B9F1A5C00B608E0 /* ModalAddCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddCategory.swift; sourceTree = "<group>"; };
-		07C6F0052B9F20AD00B608E0 /* Button_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_1.swift; sourceTree = "<group>"; };
-		07C6F0072B9F541400B608E0 /* Button_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_2.swift; sourceTree = "<group>"; };
+		07C6F0072B9F541400B608E0 /* Button_player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_player.swift; sourceTree = "<group>"; };
 		07C780942BA33AC4007A6BD8 /* FavoriteChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteChild.swift; sourceTree = "<group>"; };
 		07C780962BA385AC007A6BD8 /* SuggestionChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionChild.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				072401E62B987D8C0030E077 /* Assets.xcassets */,
-				070407722BA465DB00661D30 /* song_01.mp3 */,
-				070407702BA465D600661D30 /* song_03.mp3 */,
 				077692B12BA1942D00A36F81 /* modals */,
 				07C7C2B72B9A199B008B27E2 /* components */,
 				07C7C2B92B9A1CD6008B27E2 /* pages */,
@@ -100,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				07C6F0032B9F1A5C00B608E0 /* ModalAddCategory.swift */,
+				0700DFA82BA8994B008BE252 /* ModalAddTitle.swift */,
+				0700DFA42BA8598C008BE252 /* ModalAddVetement.swift */,
+				076E21022BA99FCF0031D5A3 /* ModalAddFavorite.swift */,
 			);
 			path = modals;
 			sourceTree = "<group>";
@@ -133,9 +136,8 @@
 		07C7C2B72B9A199B008B27E2 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				0769F6AD2B9B6000009DD056 /* Button_3.swift */,
-				07C6F0052B9F20AD00B608E0 /* Button_1.swift */,
-				07C6F0072B9F541400B608E0 /* Button_2.swift */,
+				0769F6AD2B9B6000009DD056 /* Button_action.swift */,
+				07C6F0072B9F541400B608E0 /* Button_player.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -146,6 +148,7 @@
 				072401E22B987D8A0030E077 /* cachemireApp.swift */,
 				072401E42B987D8A0030E077 /* ContentView.swift */,
 				072401F12B98854D0030E077 /* LoadingPage.swift */,
+				0700DFA62BA89588008BE252 /* Struct.swift */,
 				07C226212BA1E0A300F8E0B6 /* assistance */,
 				0739D7912BA074670073D787 /* dressing */,
 				07C226202BA1E08E00F8E0B6 /* favorite */,
@@ -213,8 +216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070407712BA465D600661D30 /* song_03.mp3 in Resources */,
-				070407732BA465DB00661D30 /* song_01.mp3 in Resources */,
 				072401E72B987D8C0030E077 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,14 +230,17 @@
 				0739D7932BA074DA0073D787 /* Dressing.swift in Sources */,
 				072401F22B98854D0030E077 /* LoadingPage.swift in Sources */,
 				07C780952BA33AC4007A6BD8 /* FavoriteChild.swift in Sources */,
+				0700DFA52BA8598C008BE252 /* ModalAddVetement.swift in Sources */,
 				072401E52B987D8A0030E077 /* ContentView.swift in Sources */,
 				07C226252BA2029400F8E0B6 /* Favorite.swift in Sources */,
+				076E21032BA99FCF0031D5A3 /* ModalAddFavorite.swift in Sources */,
 				0739D7952BA082D70073D787 /* DressingChild.swift in Sources */,
-				07C6F0082B9F541400B608E0 /* Button_2.swift in Sources */,
-				0769F6AE2B9B6000009DD056 /* Button_3.swift in Sources */,
-				07C6F0062B9F20AD00B608E0 /* Button_1.swift in Sources */,
+				07C6F0082B9F541400B608E0 /* Button_player.swift in Sources */,
+				0769F6AE2B9B6000009DD056 /* Button_action.swift in Sources */,
 				07C226232BA2028500F8E0B6 /* Assistance.swift in Sources */,
+				0700DFA92BA8994B008BE252 /* ModalAddTitle.swift in Sources */,
 				07C780972BA385AC007A6BD8 /* SuggestionChild.swift in Sources */,
+				0700DFA72BA89588008BE252 /* Struct.swift in Sources */,
 				072401E32B987D8A0030E077 /* cachemireApp.swift in Sources */,
 				07C6F0042B9F1A5C00B608E0 /* ModalAddCategory.swift in Sources */,
 				07C226272BA2029E00F8E0B6 /* Suggestion.swift in Sources */,

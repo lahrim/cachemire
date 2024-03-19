@@ -4,20 +4,32 @@ import SwiftUI
 struct SuggestionChild: View {
   var vetementName = ""
   
-  struct Array: Identifiable {
-    var id = UUID()
-    var name: String
-    var song: String = "song_01"
-  }
-  
-  let arrayList: [Array] = [
-    Array(name: "T-shirt blanc"),
-    Array(name: "Pantalon bleu", song: "song_02"),
-    Array(name: "Pull rouge")
+  let arrayList: [ArrayStructGroup] = [
+    ArrayStructGroup(name: "Pas de préférence", group: [
+      ArrayStruct(name: "T-shirt blanc"),
+      ArrayStruct(name: "Pantalon bleu", songName: "song_02"),
+      ArrayStruct(name: "Pull rouge")
+    ]),
+    ArrayStructGroup(name: "Couleur bleu", group: [
+      ArrayStruct(name: "T-shirt bleu"),
+      ArrayStruct(name: "Jean", songName: "song_02")
+    ]),
+    ArrayStructGroup(name: "Couleur rouge", group: [
+      ArrayStruct(name: "T-shirt blanc"),
+      ArrayStruct(name: "Pantalon noir", songName: "song_02"),
+      ArrayStruct(name: "Pull rouge")
+    ]),
+    ArrayStructGroup(name: "Couleur jaune", group: [
+      ArrayStruct(name: "T-shirt jaune"),
+      ArrayStruct(name: "Jean", songName: "song_02"),
+    ]),
+    ArrayStructGroup(name: "Couleur noir", group: [
+      ArrayStruct(name: "T-shirt noir"),
+      ArrayStruct(name: "Pantalon noir", songName: "song_02"),
+      ArrayStruct(name: "Pull noir")
+    ])
   ]
-  
-  //  @Binding var Nom: String
-  
+
   
   var body: some View {
     ZStack{
@@ -26,12 +38,13 @@ struct SuggestionChild: View {
       ScrollView{
         VStack(alignment: .leading){
           VStack(alignment: .trailing){
-            // ModalAddCategory(title: "Ajouter un vêtement", bindingTitleTextField: $arrayList)
-            // .padding(.bottom)
-            
             ScrollView{
               ForEach(arrayList) { i in
-//                Button_2(text: i.name)
+                if i.name == vetementName {
+                  ForEach(i.group){a in
+                    Button_player(text: a.name)
+                  }
+                }
               }
             } // ScrollView
             
@@ -46,6 +59,3 @@ struct SuggestionChild: View {
     .accessibilityLabel(vetementName)
   }
 }
-
-
-#Preview { SuggestionChild() }

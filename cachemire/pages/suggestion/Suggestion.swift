@@ -2,22 +2,16 @@ import SwiftUI
 
 
 struct Suggestion: View {
-  struct Array: Identifiable {
-    var id = UUID()
-    var name: String
-    var active: Bool = false
-  }
-  
-  @State private var arrayList: [Array] = [
-    Array(name: "Pas de préférence"),
-    Array(name: "Couleur bleu"),
-    Array(name: "Couleur rouge"),
-    Array(name: "Couleur jaune"),
-    Array(name: "Couleur noir")
+  @State private var arrayList: [ArrayStruct] = [
+    ArrayStruct(name: "Pas de préférence"),
+    ArrayStruct(name: "Couleur bleu"),
+    ArrayStruct(name: "Couleur rouge"),
+    ArrayStruct(name: "Couleur jaune"),
+    ArrayStruct(name: "Couleur noir")
   ]
   
-  // todo - trouver le bon type
   @State private var reponse = ""
+
   
   var body: some View {
     NavigationStack{
@@ -33,6 +27,10 @@ struct Suggestion: View {
 
                   for i in arrayList.indices {
                     arrayList[i].active = (arrayList[i].id == idActive)
+                    
+                    if arrayList[i].active {
+                      reponse = arrayList[i].name
+                    }
                   }
                 }
                 .foregroundColor(.black)
@@ -43,12 +41,28 @@ struct Suggestion: View {
           .accessibilityLabel("Mes préférences")
         } // List
         .scrollContentBackground(.hidden)
+        
+        VStack{
+          NavigationLink(destination: SuggestionChild(vetementName: reponse)) {
+            Text("Valider")
+              .bold()
+              .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+              .frame(minWidth: 100, maxWidth: .infinity)
+              .foregroundStyle(.white)
+              .padding()
+              .background(.default)
+              .clipShape(RoundedRectangle(cornerRadius: 60))
+              .accessibilityLabel("Valider")
+          } // NavigationLink
+          .disabled(reponse.isEmpty)
+        } // VStack
+          .opacity(reponse.isEmpty ? 0.5 : 1)
+          .animation(.easeOut(duration: 0.5), value: !reponse.isEmpty)
+          .padding()
+          .padding(.top, 30)
       } // ZStack
       .navigationTitle("Suggestion")
       .accessibilityLabel("Suggestion")
     } // NavigationStack
   }
 }
-
-
-#Preview { Suggestion() }

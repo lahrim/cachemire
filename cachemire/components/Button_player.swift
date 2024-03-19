@@ -2,14 +2,12 @@ import SwiftUI
 import AVFoundation
 
 
-struct Button_2: View {
+struct Button_player: View {
   var text = "Mon titre"
   var favori = false
   var songName = ""
   var useSong = false
-  
-  @Binding var activeSong: Bool
-  
+    
   @State var audioPlayer:AVAudioPlayer?
   @State private var isPlay = false
   @State private var favoriActive = false
@@ -26,7 +24,6 @@ struct Button_2: View {
       player.play()
       
       isPlay =  true
-      activeSong = true
     } catch let error as NSError {
       print(error.description)
     }
@@ -37,7 +34,6 @@ struct Button_2: View {
       player.stop()
       
       isPlay = false
-      activeSong = false
     }
   }
   
@@ -60,6 +56,7 @@ struct Button_2: View {
       
       if favori {
         Button("", systemImage: favoriActive ? "heart.fill" : "heart"){ favoriActive.toggle() }
+          .padding(.leading, 10)
           .font(.title2)
           .foregroundColor(favoriActive ? .red : .black)
           .accessibilityLabel(favoriActive ? "" : "Ajouter aux favoris")
@@ -72,6 +69,4 @@ struct Button_2: View {
 }
 
 
-#Preview { 
-  Button_2(activeSong: .constant(Bool()))
-}
+//#Preview { Button_player(activeSong: .constant(Bool())) }

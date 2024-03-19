@@ -9,3 +9,5 @@ struct cachemireApp: App {
     }
   }
 }
+
+// info - propriété calculée ou computing propriety (permet d'excuter du code directement sans bouton

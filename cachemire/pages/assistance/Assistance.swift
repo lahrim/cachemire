@@ -2,20 +2,24 @@ import SwiftUI
 
 
 struct Assistance: View {
-  struct Array: Identifiable {
-    var id = UUID()
-    var name: String
-    var song: String = "song_01"
-  }
-  
-  let arrayList: [Array] = [
-    Array(name: "Comment ajouter un vêtement ?"),
-    Array(name: "Comment créer une combinaison ?", song: "song_02"),
-    Array(name: "Comment créer une catégorie ? "),
-    Array(name: "Comment scanner un article ?"),
-    Array(name: "Comment lire une combinaison ?"),
-    Array(name: "Comment mettre en favoris un article ?")
+  let arrayList: [ArrayStruct] = [
+    ArrayStruct(name: "Comment ajouter un vêtement ?"),
+    ArrayStruct(name: "Comment créer une combinaison ?", songName: "song_02"),
+    ArrayStruct(name: "Comment créer une catégorie ? "),
+    ArrayStruct(name: "Comment scanner un article ?"),
+    ArrayStruct(name: "Comment lire une combinaison ?"),
+    ArrayStruct(name: "Comment mettre en favoris un article ?")
   ]
+  
+  @State private var searchText: String = ""
+  
+  var filtered: [ArrayStruct] {
+    if searchText.isEmpty {
+      return arrayList
+    } else {
+      return arrayList.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+    }
+  }
   
   
   var body: some View {
@@ -27,8 +31,8 @@ struct Assistance: View {
           VStack(alignment: .leading){
             VStack(alignment: .trailing){
               ScrollView{
-                ForEach(arrayList) { i in
-//                  Button_2(text: i.name, useSong: $)
+                ForEach(filtered) { i in
+                  Button_player(text: i.name)
                 }
               } // ScrollView
 
@@ -40,9 +44,7 @@ struct Assistance: View {
       } // ZStack
       .navigationTitle("Assistance")
       .accessibilityLabel("Assistance")
+      .searchable(text: $searchText)
     } // NavigationStack
   }
 }
-
-
-#Preview { Assistance() }

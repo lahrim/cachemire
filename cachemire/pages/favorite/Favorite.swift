@@ -3,6 +3,15 @@ import SwiftUI
 
 struct Favorite: View {
   @State private var arrayList = ["Anniversaires", "Lundi", "Soirée cinéma"]
+  @State private var searchText: String = ""
+  
+  var filtered: [String] {
+    if searchText.isEmpty {
+      return arrayList
+    } else {
+      return arrayList.filter { $0.lowercased().contains(searchText.lowercased()) }
+    }
+  }
   
   
   var body: some View {
@@ -16,14 +25,13 @@ struct Favorite: View {
               HStack{
                 Spacer()
                 
-                ModalAddCategory(bindingTitleTextField: $arrayList)
+                ModalAddCategory(title: "Ajouter un favori", bindingTitleTextField: $arrayList)
               } // HStack
             } // VStack
             .padding(.vertical)
             
             
-            
-            ForEach(arrayList, id: \.self) { name in
+            ForEach(filtered, id: \.self) { name in
               NavigationLink(destination: FavoriteChild(vetementName: name)) {
                 Text(name.description)
                   .font(.title2)
@@ -46,9 +54,7 @@ struct Favorite: View {
       } // ZStack
       .navigationTitle("Favoris")
       .accessibilityLabel("Favoris")
+      .searchable(text: $searchText)
     } // NavigationView
   }
 }
-
-
-#Preview { Favorite() }

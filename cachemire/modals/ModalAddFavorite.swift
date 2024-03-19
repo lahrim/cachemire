@@ -1,12 +1,10 @@
 import SwiftUI
 
 
-struct ModalAddCategory: View {
-  var title = "Ajouter une catégorie"
-  @State private var toggleModal = false
-  @State private var titleTextField = ""
+struct ModalAddFavorite: View {
+  var title = "Ajouter un vêtement aux favoris"
   
-  @Binding var bindingTitleTextField: [String]
+  @State private var toggleModal = false
   
   
   var body: some View {
@@ -39,7 +37,7 @@ struct ModalAddCategory: View {
             } // HStack
               .padding(.bottom, 20)
             
-            ModalAddTitle(bindingTitleTextField: $bindingTitleTextField, toggleModal: $toggleModal)
+            Dressing(modalAddFavorite: true)
               
             Spacer()
           } // Vstack
@@ -48,4 +46,9 @@ struct ModalAddCategory: View {
       } // Modal - sheet
       .accessibilityLabel(title)
   }
+}
+
+
+#Preview {
+    ModalAddFavorite()
 }

@@ -7,6 +7,8 @@ struct Button_player: View {
   var favori = false
   var songName = ""
   var useSong = false
+  
+  @State private var toggleModal = false
     
   @State var audioPlayer:AVAudioPlayer?
   @State private var isPlay = false
@@ -55,10 +57,44 @@ struct Button_player: View {
         .foregroundColor(.black)
       
       if favori {
-        Button("", systemImage: favoriActive ? "heart.fill" : "heart"){ favoriActive.toggle() }
+        Button("", systemImage: favoriActive ? "heart.fill" : "heart"){
+          favoriActive.toggle()
+          
+          if favoriActive {
+            toggleModal = true
+          }
+        }
           .padding(.leading, 10)
           .font(.title2)
           .foregroundColor(favoriActive ? .red : .black)
+          .sheet(isPresented: $toggleModal) {
+            // début de la modal
+            ZStack{
+              Color.modal.ignoresSafeArea()
+              
+              VStack{
+                HStack{
+                  Spacer()
+                  
+                  Text("Ajouter aux favoris")
+                    .bold()
+                  
+                  Spacer()
+                  
+                  Button("", systemImage: "xmark.circle.fill") { toggleModal = false }
+                    .frame(width: 30, height: 30)
+                    .foregroundStyle(.gray)
+                    .font(.title)
+                } // HStack
+                  .padding(.bottom, 20)
+                
+                Favorite(modalAddFavorite: true)
+                  
+                Spacer()
+              } // Vstack
+                .padding()
+            } // ZStack
+          } // Modal - sheet
           .accessibilityLabel(favoriActive ? "" : "Ajouter aux favoris")
       }
     }

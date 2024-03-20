@@ -3,6 +3,7 @@ import SwiftUI
 
 struct FavoriteChild: View {
   var vetementName = ""
+  var modalAddFavorite = false
   
   @State private var arrayListColor = [""]
   
@@ -25,13 +26,19 @@ struct FavoriteChild: View {
   
   var body: some View {
     ZStack{
-      Color.bg.ignoresSafeArea(edges: .top)
+      if modalAddFavorite {
+        Color.modal.ignoresSafeArea()
+      } else {
+        Color.bg.ignoresSafeArea(edges: .top)
+      }
       
       ScrollView{
         VStack(alignment: .leading){
           VStack(alignment: .trailing){
-             ModalAddFavorite()
-             .padding(.bottom)
+            if !modalAddFavorite {
+              ModalAddFavorite()
+                .padding(.bottom)
+            }
             
             ScrollView{
               ForEach(filtered) { i in

@@ -47,7 +47,7 @@ struct SuggestionChild: View {
               ForEach(arrayList) { i in
                 if i.name == vetementName {
                   ForEach(i.group){a in
-                    Button_player(text: a.name)
+                    Button_player(text: a.name, favori: true)
                   }
                 }
               }

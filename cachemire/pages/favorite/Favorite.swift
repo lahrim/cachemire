@@ -2,8 +2,11 @@ import SwiftUI
 
 
 struct Favorite: View {
+  var modalAddFavorite = false
+  
   @State private var arrayList = ["Anniversaires", "Lundi", "Soirée cinéma"]
   @State private var searchText: String = ""
+  
   
   var filtered: [String] {
     if searchText.isEmpty {
@@ -17,22 +20,28 @@ struct Favorite: View {
   var body: some View {
     NavigationStack{
       ZStack{
-        Color.bg.ignoresSafeArea(edges: .top)
+        if modalAddFavorite {
+          Color.modal.ignoresSafeArea()
+        } else {
+          Color.bg.ignoresSafeArea(edges: .top)
+        }
         
         ScrollView{
           VStack{
-            VStack{
-              HStack{
-                Spacer()
-                
-                ModalAddCategory(title: "Ajouter un favori", bindingTitleTextField: $arrayList)
-              } // HStack
-            } // VStack
-            .padding(.vertical)
+            if !modalAddFavorite {
+              VStack{
+                HStack{
+                  Spacer()
+                  
+                  ModalAddCategory(title: "Ajouter un favori", bindingTitleTextField: $arrayList)
+                } // HStack
+              } // VStack
+              .padding(.vertical)
+            }
             
             
             ForEach(filtered, id: \.self) { name in
-              NavigationLink(destination: FavoriteChild(vetementName: name)) {
+              NavigationLink(destination: FavoriteChild(vetementName: name, modalAddFavorite: modalAddFavorite)) {
                 Text(name.description)
                   .font(.title2)
                   .foregroundStyle(.black)
@@ -53,6 +62,7 @@ struct Favorite: View {
         } // ScrollView
       } // ZStack
       .navigationTitle("Favoris")
+      .navigationBarTitleDisplayMode(modalAddFavorite ? .inline : .large)
       .accessibilityLabel("Favoris")
       .searchable(text: $searchText)
     } // NavigationView

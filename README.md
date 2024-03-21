@@ -32,14 +32,24 @@ Cachemire est un projet open source, conçu dans un esprit de collaboration et d
 ## Aperçu
 
 
-[![Page d'accueil](img/accueil.png)](img/accueil.png){:width="200px" height="150px"}
+<a href="img/accueil.png"><img src="img/accueil.png" alt="Page d'accueil" width="100"></a>
 
+<a href="img/dressing_parent.png"><img src="img/dressing_parent.png" alt="Dressing parent" width="100"></a>
+<a href="img/dressing_enfant.png"><img src="img/dressing_enfant.png" alt="Dressing enfant" width="100"></a>
+<a href="img/dressing_modal_categorie.png"><img src="img/dressing_modal_categorie.png" alt="Dressing modal categorie" width="100"></a>
+<a href="img/dressing_modal_favoris.png"><img src="img/dressing_modal_favoris.png" alt="Dressing modal favoris" width="100"></a>
+<a href="img/dressing_modal_ajout_vetement.png"><img src="img/dressing_modal_ajout_vetement.png" alt="Dressing modal ajouter un vetement" width="100"></a>
+<a href="img/dressing_modal_ajout_vetement_enregistrement.png"><img src="img/dressing_modal_ajout_vetement_enregistrement.png" alt="Dressing modal ajouter un vetement" width="100"></a>
+<a href="img/dressing_modal_ajout_vetement_valider.png"><img src="img/dressing_modal_ajout_vetement_valider.png" alt="Dressing modal ajouter un vetement" width="100"></a>
+<a href="img/dressing_modal_ajout_vetement_titre.png"><img src="img/dressing_modal_ajout_vetement_titre.png" alt="Dressing modal ajouter un vetement" width="100"></a>
 
-[![Dressing parent](img/dressing_parent.png)](img/dressing_parent.png){:width="200px" height="150px"}
-[![Dressing enfant](img/dressing_enfant.png)](img/dressing_enfant.png){:width="200px" height="150px"}
-[![Dressing modal categorie](img/dressing_modal_categorie.png)](img/dressing_modal_categorie.png){:width="200px" height="150px"}
-[![Dressing modal favoris](img/dressing_modal_favoris.png)](img/dressing_modal_favoris.png){:width="200px" height="150px"}
-[![Dressing modal ajouter un vetement](img/dressing_modal_ajout_vetement.png)](img/dressing_modal_ajout_vetement.png){:width="200px" height="150px"}
-[![Dressing modal ajouter un vetement](img/dressing_modal_ajout_vetement_enregistrement.png)](img/dressing_modal_ajout_vetement_enregistrement.png){:width="200px" height="150px"}
-[![Dressing modal ajouter un vetement](img/dressing_modal_ajout_vetement_valider.png)](img/dressing_modal_ajout_vetement_valider.png){:width="200px" height="150px"}
-[![Dressing modal ajouter un vetement](img/dressing_modal_ajout_vetement_titre.png)](img/dressing_modal_ajout_vetement_titre.png){:width="200px" height="150px"}
+<a href="img/suggestion_parent.png"><img src="img/suggestion_parent.png" alt="Suggestion parent" width="100"></a>
+<a href="img/suggestion_enfant.png"><img src="img/suggestion_enfant.png" alt="Suggestion enfant" width="100"></a>
+
+<a href="img/favoris_parent.png"><img src="img/favoris_parent.png" alt="Favoris parent" width="100"></a>
+<a href="img/favoris_enfant.png"><img src="img/favoris_enfant.png" alt="Favoris enfant" width="100"></a>
+<a href="img/favoris_modal_categorie.png"><img src="img/favoris_modal_categorie.png" alt="Favoris modal categorie" width="100"></a>
+<a href="img/favoris_modal_favoris.png"><img src="img/favoris_modal_favoris.png" alt="Favoris modal ajouter un vetement" width="100"></a>
+<a href="img/favoris_modal_favoris_valider.png"><img src="img/favoris_modal_favoris_valider.png" alt="Favoris modal ajouter un vetement" width="100"></a>
+
+<a href="img/assistance_parent.png"><img src="img/assistance_parent.png" alt="Assistances" width="100"></a>

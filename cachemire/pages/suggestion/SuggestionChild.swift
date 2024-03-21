@@ -23,9 +23,10 @@ struct SuggestionChild: View {
       ArrayStruct(name: "Jean", songName: "song_02")
     ]),
     ArrayStructGroup(name: "Tenue pour un date", group: [
-      ArrayStruct(name: "Robe court rouge"),
-      ArrayStruct(name: "Talon"),
-      ArrayStruct(name: "Veste en jean")
+      ArrayStruct(name: "T-shir blanc"),
+      ArrayStruct(name: "Chemise col mao"),
+      ArrayStruct(name: "Pantalon chino beige"),
+      ArrayStruct(name: "Blazer")
     ]),
     ArrayStructGroup(name: "Tenue pour un concert", group: [
       ArrayStruct(name: "Jean wide leg"),
